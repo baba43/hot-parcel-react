@@ -1,38 +1,35 @@
-import React from 'react'
+import React from 'react';
 
 class App extends React.Component {
-
-  constructor () {
-    super()
+  constructor() {
+    super();
     this.state = {
-      foo: ''
-    }
+      foo: '',
+    };
   }
 
-  onClick () {
-    this.setState({foo: 'clicked'})
+  onClick() {
+    this.setState({ foo: 'clicked' });
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
-      foo: 'baz'
-    })
+      foo: 'baz',
+    });
   }
 
-  componentWillUnmount () {
-    alert('I knew Dan and Devon lied about hot reloading.')
+  componentWillUnmount() {
+    alert('I knew Dan and Devon lied about hot reloading.');
   }
 
-  render () {
-
+  render() {
     return (
       <div>
         <h2>Current state: {this.state.foo}</h2>
         <button onClick={this.onClick.bind(this)}>change state</button>
       </div>
-    )
+    );
   }
-
 }
 
-export { App }
+export { App };
