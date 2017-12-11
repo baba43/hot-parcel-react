@@ -8,6 +8,8 @@ class App extends React.Component {
       foo: '',
       counter: 0,
     };
+    this.onClick = this.onClick.bind(this);
+    this.onIncreaseCounter = this.onIncreaseCounter.bind(this);
   }
 
   onClick() {
@@ -34,8 +36,8 @@ class App extends React.Component {
     return (
       <div>
         <h2>Current state: {this.state.foo}</h2>
-        <button onClick={this.onClick.bind(this)}>change state</button>
-        <button onClick={this.onIncreaseCounter.bind(this)}>counter +1</button>
+        <button onClick={this.onClick}>change state</button>
+        <button onClick={this.onIncreaseCounter}>counter +1</button>
         <CounterWidget counter={this.state.counter} />
       </div>
     );
